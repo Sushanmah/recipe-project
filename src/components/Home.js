@@ -33,21 +33,26 @@ const Home = () => {
   };
   return (
     <div className="App">
-      <TopBar />
+      {/* <TopBar /> */}
       <h2>
         <Link to={"/"}> Back</Link>
       </h2>
-      <form onSubmit={getSearch} className="search-form">
-        <input
-          className="search-bar"
-          type="text"
-          value={search}
-          onChange={updateSerch}
-        />
-        <button className="search-button" type="submit">
-          Search
-        </button>
-      </form>
+      <div className="search-area">
+        <form onSubmit={getSearch} className="search-form">
+          <div className="search-box">
+            <input
+              className="search-input"
+              type="text"
+              value={search}
+              onChange={updateSerch}
+            />
+            <button className="search-btn" type="submit">
+              Search
+            </button>
+          </div>
+        </form>
+      </div>
+
       {recipes.map(recipe => (
         <Recipe
           yield={recipe.recipe.yield}
