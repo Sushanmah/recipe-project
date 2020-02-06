@@ -35,7 +35,7 @@ const Home = () => {
     <div className="App">
       {/* <TopBar /> */}
       <h2>
-        <Link to={"/"}> Back</Link>
+        <Link to={"/"}><i class="material-icons">reply</i></Link>
       </h2>
       <div className="search-area">
         <form onSubmit={getSearch} className="search-form">
