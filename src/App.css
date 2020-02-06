@@ -5,7 +5,7 @@
 }
 
 body {
-  font-family: sans-serif;
+  font-family: 'Kaushan Script', cursive;
 }
 a {
   text-decoration: none;
@@ -27,8 +27,16 @@ a {
   display: flex;
   justify-content: center;
   text-align: left;
+  font-size: 30px;
+  margin-left: 5%;
   flex-direction: column;
   z-index: 1;
+
+}
+
+.slider .slider-text >h2>i{
+  font-size: 40px;
+  margin-left: 10px;
 }
 
 @keyframes slide {
@@ -116,7 +124,7 @@ nav {
 }
 .content {
   width: 100%;
-  background: #313131;
+  background: #f1eeee;
   /* padding-right: 5px;
   margin: 10px; */
 }
@@ -155,7 +163,7 @@ nav {
   width: 300px;
   z-index: -1;
 
-  /* border-radius: 50%; */
+  border-radius: 20px;
   /* border-top-right-radius: 10px;
   border-top-left-radius: 10px; */
 }

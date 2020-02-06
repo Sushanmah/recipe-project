@@ -5,8 +5,8 @@ class  Slider extends Component{
         return(
         <div class="slider">
               <div class="slider-text">
-                <h1>This is Slider text</h1>
-                <h2>This is small slider text</h2>
+                  <h1>Good Food</h1>
+                <h2>Good Mood<i className="material-icons">sentiment_very_satisfied</i></h2>
               </div>
         </div>
 

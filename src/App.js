@@ -8,6 +8,7 @@ import Detail from "./components/Detail";
 import TopBar from "./Bar/TopBar/TopBar";
 import Aboutus from "./components/Aboutus";
 import Slider from "./Bar/SideBar/Slider";
+import Landing from "./components/Landing";
 
 class App extends Component {
   render() {
@@ -15,15 +16,7 @@ class App extends Component {
       <div>
         <TopBar />
         <Slider />
-        <BrowserRouter>
-          <h2>
-            <Link to={"/home"}> Search Product</Link>
-          </h2>
-
-          <Route exact path="/home" component={Home} />
-          {/* <Route exact path="/" component={Trending} /> */}
-          <Trending />
-        </BrowserRouter>
+            <Landing/>
       </div>
     );
   }
