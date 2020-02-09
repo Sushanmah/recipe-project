@@ -15,7 +15,7 @@ a {
 .slider {
   z-index: -1;
   height: 80vh;
-  background: url("./images/1.jpg");
+  background: url("../images/1.jpg");
   /*background-blend-mode:darken;*/
   background-repeat: no-repeat;
   background-size: 100%;
@@ -41,17 +41,17 @@ a {
 
 @keyframes slide {
   25% {
-    background: url("./images/1.jpg");
+    background: url("../images/1.jpg");
     background-repeat: no-repeat;
     background-size: 100%;
   }
   55% {
-    background: url("./images/3.jpg");
+    background: url("../images/3.jpg");
     background-repeat: no-repeat;
     background-size: 100%;
   }
   100% {
-    background: url("./images/4.jpg");
+    background: url("../images/4.jpg");
     background-repeat: no-repeat;
     background-size: 100%;
   }
