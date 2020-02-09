@@ -12,6 +12,7 @@ const Trend = props => {
           <Link to={"/detail"}>
             <img src={props.image} />
           </Link>
+          <h3>{props.title}</h3>
           <div class="overlay">
             <div class="card-text">
               <h3>{props.title}</h3>
