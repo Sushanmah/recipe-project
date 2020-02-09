@@ -7,15 +7,20 @@ const Recipe = props => {
 
   return (
     <Router>
-      <div class="trending">
-        <div class="card">
+      <div class="recepie">
+        <div class="card-recepie">
           <Link to={"/detail"}>
             <img src={props.image} />
           </Link>
-          <div class="overlay">
+          <h3 class="head3">{props.title}</h3>
+          <div class="overlay-recepie">
             <div class="card-text">
-              <h3>{props.title}</h3>
-              {/* <h3>{props.ingredients}</h3> */}
+              <h3 class="head3">Ingregients:</h3>
+              <ul>
+                {props.ingredients.map(ingredient => (
+                  <li>{ingredient}</li>
+                ))}
+              </ul>
               {/* <button>{props.yield}</button> */}
             </div>
           </div>

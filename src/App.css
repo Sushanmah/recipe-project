@@ -48,11 +48,12 @@ a {
     background-size: 100%;
   }
 }
-nav {
+.mynav {
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-between;
   align-items: center;
-  height: 15vh;
+  height: 10vh;
+  background: #f1eeee;
 }
 
 .logo {
@@ -60,12 +61,27 @@ nav {
   box-sizing: border-box;
   font-size: 1.3rem;
   font-weight: bold;
-  position: fixed;
+  /* position: fixed; */
 }
 .logo > img {
   height: 9vh;
   width: 12vw;
   padding: 0px 10px;
+  margin-top: 25px;
+}
+.auth-container {
+  padding: 10px;
+  margin: 10px;
+}
+.auth-container > button {
+  background: coral;
+  width: 150px;
+  color: white;
+  border: none;
+  margin: 10px;
+  padding: 20px;
+  border-top-left-radius: 30px;
+  border-bottom-right-radius: 30px;
 }
 
 .search-area {
@@ -79,9 +95,9 @@ nav {
   background: coral;
   color: white;
   border: none;
-  padding: 0 20px;
-  border-top-right-radius: 30px;
-  border-bottom-left-radius: 30px;
+  padding: 20px;
+  border-top-left-radius: 30px;
+  border-bottom-right-radius: 30px;
 }
 .search-box {
   border: none;
@@ -116,28 +132,48 @@ nav {
 }
 .content {
   width: 100%;
-  background: #313131;
+  background: #f1eeee;
   /* padding-right: 5px;
   margin: 10px; */
 }
 .content > h1 {
   text-align: center;
   margin-bottom: 10px;
-  color: #fff;
+  color: #000;
 }
 
 .trending {
   display: grid;
+  grid-row-gap: 50px;
+  grid-template-columns: repeat(4, 1fr);
+  align-items: center;
+  margin-left: 10px;
+  /* grid-gap: 5px 10px; */
+}
+.recepie {
+  display: grid;
   grid-template-columns: repeat(3, 1fr);
   align-items: center;
-  margin-left: 50px;
-  grid-gap: 10px;
+  margin-left: 10px;
+  /* grid-gap: 5px 10px; */
 }
 .trending .card {
   position: relative;
   width: 100%;
-  height: 500px;
-
+  height: 400px;
+  text-align: center;
+  /* width: 100%;
+  height: 60vh;
+  border: 1px solid #000;
+  text-align: center;
+  border-radius: 10px;
+  background: grey; */
+}
+.recepie .card-recepie {
+  position: relative;
+  width: 100%;
+  height: 350px;
+  text-align: center;
   /* width: 100%;
   height: 60vh;
   border: 1px solid #000;
@@ -153,30 +189,35 @@ nav {
 .trending .card a > img {
   height: 300px;
   width: 300px;
-  z-index: -1;
-
-  /* border-radius: 50%; */
+  /* z-index: -1; */
+  border-radius: 20px;
+  /* border-top-right-radius: 10px;
+  border-top-left-radius: 10px; */
+}
+.recepie .card-recepie a > img {
+  height: 300px;
+  width: 300px;
+  /* z-index: -1; */
+  border-radius: 20px;
   /* border-top-right-radius: 10px;
   border-top-left-radius: 10px; */
 }
 
 .card-text {
   padding: 20px;
+  /* font-size: 16px; */
+}
+.head3 {
+  font-size: 15px;
+  font-weight: bold;
+  padding-top: 0;
+  margin-top: 0;
 }
 
 .card-text > h3 {
-  color: #fff;
+  color: rgb(8, 8, 8);
   text-transform: uppercase;
-}
-
-.card-text > button {
-  border-radius: 5px;
-  margin: 5px;
-  width: 100%;
-  padding: 10px;
-  background: coral;
-  color: black;
-  font: 16px bold;
+  font-weight: bold;
 }
 .overlay {
   /* border-radius: 50%; */
@@ -184,16 +225,36 @@ nav {
   bottom: 0;
   left: 100%;
   right: 0;
-  background-color: #aaddaa;
+  background-color: #a2c9f7;
   overflow: hidden;
   width: 0;
   height: 100%;
+  transition: 0.5s ease;
+}
+.overlay-recepie {
+  /* border-radius: 50%; */
+  position: absolute;
+  bottom: 0;
+  left: 100%;
+  right: 0;
+  background-color: #a2c9f7;
+  overflow: hidden;
+  width: 0;
+  height: 300px;
+  top: 0;
   transition: 0.5s ease;
 }
 
 .card:hover .overlay {
   width: 100%;
   left: 0;
+  /* right: 0; */
+}
+
+.card-recepie:hover .overlay-recepie {
+  width: 200%;
+  /* left: 0; */
+  right: 0;
 }
 
 .about-us {

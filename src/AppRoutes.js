@@ -1,7 +1,7 @@
 import Detail from "./components/Detail";
-import Home from "./components/Home"
+import Home from "./container/Home";
 
 export default [
-    {path:'/details', component:Detail, exact:true},
-    {path:'', component:Home, exact:true},
-]
+  { path: "/details", component: Detail, exact: true },
+  { path: "", component: Home, exact: true }
+];

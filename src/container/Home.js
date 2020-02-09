@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import Recipe from "./Recipe";
+import Recipe from "../components/Recipe";
 import TopBar from "../Bar/TopBar/TopBar";
 import { Link, BrowserRouter, Route, Switch } from "react-router-dom";
 
@@ -32,7 +32,7 @@ const Home = () => {
     setQuery(search);
   };
   return (
-    <div className="App">
+    <div>
       {/* <TopBar /> */}
       <h2>
         <Link to={"/"}> Back</Link>
@@ -43,6 +43,7 @@ const Home = () => {
             <input
               className="search-input"
               type="text"
+              placeholder="CHICKEN"
               value={search}
               onChange={updateSerch}
             />

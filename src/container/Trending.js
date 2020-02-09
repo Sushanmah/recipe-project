@@ -1,7 +1,10 @@
 import React, { useEffect, useState } from "react";
-import Trend from "./Trend";
+import { Link, BrowserRouter, Route, Switch } from "react-router-dom";
+
+import Trend from "../components/Trend";
 import TopBar from "../Bar/TopBar/TopBar";
-import Aboutus from "./Aboutus";
+import Aboutus from "../components/Aboutus";
+import Slider from "../Bar/SideBar/Slider";
 
 const Trending = () => {
   const APP_ID = "5ee9d0c2";
@@ -25,19 +28,24 @@ const Trending = () => {
     console.log(data.hits);
   };
   return (
-    <div class="main-content">
-      <div class="content">
-        <h1>TRENDING RECEPIES</h1>
-        <div class="trending">
-          {recipes.map(recipe => (
-            <Trend
-              yield={recipe.recipe.yield}
-              title={recipe.recipe.label}
-              calories={recipe.recipe.calories}
-              image={recipe.recipe.image}
-              ingredients={recipe.recipe.ingredients}
-            />
-          ))}
+    <div>
+      {/* <TopBar />
+      <Slider /> */}
+      <Slider />
+      <div class="main-content">
+        <div class="content">
+          <h1>TRENDING RECEPIES</h1>
+          <div class="trending">
+            {recipes.map(recipe => (
+              <Trend
+                yield={recipe.recipe.yield}
+                title={recipe.recipe.label}
+                calories={recipe.recipe.calories}
+                image={recipe.recipe.image}
+                ingredients={recipe.recipe.ingredientLines}
+              />
+            ))}
+          </div>
         </div>
       </div>
       {/* <Aboutus /> */}
