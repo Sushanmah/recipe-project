@@ -8,6 +8,7 @@ import Detail from "./Detail";
 import TopBar from "../Bar/TopBar/TopBar";
 import Aboutus from "./Aboutus";
 import Slider from "../Bar/SideBar/Slider";
+import loghome from "./loghome";
 import AddRecipe from "./AddRecipe";
 
 class Landing extends Component {
@@ -27,12 +28,15 @@ class Landing extends Component {
                     <h2>
                         <Link to={"/home"}> Search Product</Link>
                     </h2>
+                    <h2>
+                        <Link to={"/loginhome"}> login</Link>
+                    </h2>
 
                     {/*{routes.map((route,key)=>(*/}
                     {/*    <Route path={route.path} component={route.component} exact={route.exact}/>*/}
                     {/*))}*/}
                     <Route exact path="/home" component={Home} />
-                    {/* <Route exact path="/" component={Trending} /> */}
+                    <Route exact path="/loginhome" component={loghome} />
                     <Trending />
                 </BrowserRouter>
             </div>
