@@ -5,6 +5,7 @@ import Trend from "../components/Trend";
 import TopBar from "../Bar/TopBar/TopBar";
 import Aboutus from "../components/Aboutus";
 import Slider from "../Bar/SideBar/Slider";
+import logo from "../Bar/TopBar/logo.png";
 
 const Trending = () => {
   const APP_ID = "5ee9d0c2";
@@ -31,6 +32,21 @@ const Trending = () => {
     <div>
       {/* <TopBar />
       <Slider /> */}
+
+      <nav class="mynav">
+        <div class="logo">
+          <img src={logo} />
+        </div>
+        <div>
+          <button className="btn waves-effect waves-light">
+            <Link to={"/loghome"}>Login</Link>
+          </button>
+          <button class="btn waves-effect waves-light">
+            <Link to={"/register"}>Register</Link>
+          </button>
+        </div>
+      </nav>
+
       <Slider />
       <div class="main-content">
         <div class="content">

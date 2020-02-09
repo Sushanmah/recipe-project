@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import logo from "./logo.png";
 import { Link, BrowserRouter, Route, Switch } from "react-router-dom";
+import loghome from "../../components/Loghome";
 
 class TopBar extends Component {
   render() {
@@ -10,19 +11,15 @@ class TopBar extends Component {
           <div class="logo">
             <img src={logo} />
           </div>
-          <div>
-            <h2>
-              <Link to={"/home"}> Search Product</Link>
-            </h2>
-          </div>
-          <div>
+
+          {/* <div>
             <button className="btn waves-effect waves-light">
-              <Link to={"/signin"}>Login</Link>
+              <Link to={"/loghome"}>Login</Link>
             </button>
             <button class="btn waves-effect waves-light">
-              <Link to={"/signup"}>Register</Link>
+              <Link to={"/register"}>Register</Link>
             </button>
-          </div>
+          </div> */}
         </nav>
       </div>
     );

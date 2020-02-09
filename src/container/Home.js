@@ -34,9 +34,9 @@ const Home = () => {
   return (
     <div>
       {/* <TopBar /> */}
-      <h2>
+      {/* <h2>
         <Link to={"/"}> Back</Link>
-      </h2>
+      </h2> */}
       <div className="search-area">
         <form onSubmit={getSearch} className="search-form">
           <div className="search-box">
