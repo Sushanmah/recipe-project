@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import "./App.css";
+import "./App.scss";
 import Home from "./components/Home";
 import Trending from "./components/Trending";
 import routes from "./AppRoutes";
@@ -10,6 +10,7 @@ import Aboutus from "./components/Aboutus";
 import Slider from "./Bar/SideBar/Slider";
 import Landing from "./components/Landing";
 import loghome from "./components/loghome"
+import AddRecipe from "./components/AddRecipe";
 
 class App extends Component {
   render() {
@@ -24,25 +25,9 @@ class App extends Component {
             <Route path="/loginhome" component={loghome}/>
             </Switch>
         </BrowserRouter>
-
-        
       </div>
     );
   }
 }
 export default App;
-{
-  /*<Switch>*/
-}
-{
-  /*    {routes.map((route,key)=>*/
-}
-{
-  /*        <Route path={route.path} component={route.component} exact={route.exact}/>*/
-}
-{
-  /*    )}*/
-}
-{
-  /*</Switch>*/
-}
+

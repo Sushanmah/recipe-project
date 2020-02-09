@@ -9,7 +9,7 @@ class  TopBar extends Component{
         return(
         <div>
             <nav>
-                <div class="logo">
+                <div className="logo">
                   <img src={logo}/>
                 </div>
                 
