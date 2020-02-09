@@ -9,14 +9,23 @@ import TopBar from "./Bar/TopBar/TopBar";
 import Aboutus from "./components/Aboutus";
 import Slider from "./Bar/SideBar/Slider";
 import Landing from "./components/Landing";
+import loghome from "./components/loghome"
 
 class App extends Component {
   render() {
     return (
       <div>
+        <BrowserRouter >
         <TopBar />
         <Slider />
             <Landing/>
+            <Switch>
+              
+            <Route path="/loginhome" component={loghome}/>
+            </Switch>
+        </BrowserRouter>
+
+        
       </div>
     );
   }
